@@ -23,12 +23,14 @@
     src: url("../fonts/OpenSans-Regular.ttf");
 }
 
+/* Общее удаление стилей */
 * {
     padding: 0;
     margin: 0;
 
     font-family: Roboto-Bold, sans-serif;
     font-size: 16px;
+    font-style: normal;
 }
 
 a {
@@ -36,7 +38,234 @@ a {
     color: black;
 }
 
-
 header {
+    background: white;
     max-width: 100%;
+    height: 90px;
+    border-bottom: 1px solid rgba(80, 71, 215, 0.2);
+    box-shadow: 0 4px 6px rgba(80, 71, 215, 0.1);
+}
+
+.header__nav {
+    height: inherit;
+    margin: 0 15%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Первый блок header */
+.header__nav-item {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    vertical-align: middle;
+}
+
+.nav-icon {
+    margin-right: 10%;
+}
+
+.nav-title {
+    font-family: Ubuntu-Bold, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #5047D7;
+}
+
+.nav-icon, .nav-title {
+    display: inline;
+    vertical-align: middle;
+}
+
+img[alt='main_icon'] {
+    width: 42px;
+    height: 50px;
+}
+
+/* Второй блок header */
+.header__nav-urls {
+    /*margin-left: 200px;*/
+    /*margin-right: 450px;*/
+    margin-left: 20%;
+    margin-right: 40%;
+
+}
+
+.nav-urls-item {
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 15%;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+/* Третий блок header */
+.nav-search > img {
+    height: 21px;
+    width: 21px;
+}
+
+.nav-search-splitter {
+    margin: auto 25px;
+}
+
+.nav-login {
+    box-sizing: border-box;
+    border: 2px solid #5047D7;
+    border-radius: 10px;
+    padding: 7% 40%;
+}
+
+.nav-login > button {
+    background: white;
+    color: #5047D7;
+    border: 0;
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+/* Блоки номера отеля */
+.content {
+    margin: auto 10%;
+}
+
+/* Навигационная панель content */
+.content-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-nav > * {
+    display: inline-block;
+    margin: 4% 0 3% 0;
+}
+
+.return__text {
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Breadcrumbs */
+.content_nav__breadcrumbs {
+    width: 27%;
+}
+
+.nav__breadcrumb_li {
+    display: inline;
+    margin-right: 5%;
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.nav__breadcrumb_li:not(:first-child)::before {
+    content: "•";
+    color: #5047D7;
+    position: relative;
+    right: 3%;
+}
+
+.nav__breadcrumb_li:last-child > a {
+    color: #333333B2;
+}
+
+/* Блоки заголовка отеля */
+.content-hotel {
+    margin: 4% 0 6% 0;
+    border: 1px solid red;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hotel__hero {
+    display: flex;
+    max-width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero__title {
+    font-family: Ubuntu-Bold, sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-right: 3%;
+}
+
+.hero__rating {
+    display: flex;
+    flex-direction: row;
+    max-width: 36%;
+}
+
+.hero__rate {
+    margin: 0 2%;
+}
+
+/* Блок Услуг отеля */
+.hotel__order {
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.order__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order__favorite > img {
+    width: 27px;
+    height: 24px;
+}
+
+.order__purchase {
+    background-color: #5047D7;
+    padding: 5% 18%;
+    border-radius: 10px;
+}
+
+.purchase__button {
+    background-color: #5047D7;
+    border: 0;
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+}
+
+.hotel__price {
+    display: block;
+    margin: 5% 0 0 50%;
+    font-family: Ubuntu-Bold, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.purchase__price {
+    font-family: Ubuntu-Bold, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.purchase__currency {
+    font-family: Ubuntu-Bold, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 3px;
 }
