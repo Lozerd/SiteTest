@@ -18,6 +18,11 @@
     src: url("../fonts/Roboto-Light.ttf");
 }
 
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -26,8 +31,14 @@
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .container {
     background-color: white;
+    height: 100%;
 }
 
 header {
@@ -115,4 +126,89 @@ header > .last-item {
     border-color: #5047D7;
     color: #5047D7;
     background-color: white;
+}
+
+.wrapper {
+    display: block;
+    width: inherit;
+    margin: 0 165px;
+    border: 1px solid black;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    margin-bottom: 60px;
+}
+
+.nav-item {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 40px 15px 0 0;
+}
+
+.nav-item:first-child {
+    margin-right: 700px;
+}
+
+.breadcrumb-icon {
+    margin: auto 0 5px 15px;
+}
+
+.item-wrapper {
+    display: flex;
+    margin: auto 0;
+}
+
+.breadcrumb {
+    font-family: OpenSans, sans-serif;
+}
+
+.last-breadcrumb {
+    color: gray;
+}
+
+.item-wrapper > svg {
+    margin: auto 10px;
+}
+
+
+.hotel-hero {
+    height: 1860px;
+}
+
+.hotel-hero.hero-section {
+    display: block;
+}
+
+.hero-section {
+    height: 40px;
+    border: 1px solid blue;
+}
+
+.hero-section > div {
+    display: inline-block;
+    height: inherit;
+    border: 1px solid red;
+}
+
+.hero-title {
+    font-family: Ubuntu-Bold, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: auto 20px auto 0;
+}
+
+
+.hero-rate:last-child {
+    margin-right: 310px;
+}
+
+.hero-favorite {
+}
+
+.hero-favorite > img {
+    height: 20px;
+    width: 20px;
 }
