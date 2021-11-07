@@ -32,10 +32,6 @@
                 </svg>
             </div>
             <button class="nav-login" type="submit">Вход</button>
-            <div class="hotel__price">
-                    От&nbsp&nbsp<b class="purchase__price">3&nbsp000</b>
-                    <b class="purchase__currency">&#8381</b>/ ночь
-                </div>
         </div>
     </div>
 </header>
@@ -104,9 +100,13 @@
                         <img class="item__favorites--image" src="frontend/src/images/favorite.jpg" alt="">
                     </a>
                 </div>
-                <div class="item__button">
-                    <button>Забронировать</button>
-                </div>
+                <button class="item__button">Забронировать</button>
+
+                <!-- TODO implement price -->
+                <!--<div style="display: block" class="hotel__price">-->
+                <!--    От&nbsp&nbsp<b class="purchase__price">3&nbsp000</b>-->
+                <!--    <b class="purchase__currency">&#8381</b>/ ночь-->
+                <!--</div>-->
             </div>
         </section>
         <section class="hotel__images">
@@ -156,36 +156,60 @@
                     </div>
                 </div>
                 <div class="info__calendar">
-                    <div class="calendar--start">
-                        <span></span>
-                        <span>Заезд</span>
+                    <div class="calendar--item">
+                        <div class="calendar--item__wrapper">
+                            <span>
+                            <img class="calendar--image" src="frontend/src/images/calendar_start.png" alt="">
+                        </span>
+                            <span>Заезд</span>
+                        </div>
                         <span>4 ноября, 2021</span>
                     </div>
-                    <div class="calendar--end">
-                        <span></span>
-                        <span>Выезд</span>
+                    <div class="calendar--item">
+                        <div class="calendar--item__wrapper">
+                            <span>
+                            <img class="calendar--image" src="frontend/src/images/calendar_start.png" alt="">
+                        </span>
+                            <span>Выезд</span>
+                        </div>
                         <span>6 ноября, 2021</span>
                     </div>
-                    <div class="calendar--guests">
-                        <span>Гостей</span>
+                    <!-- Каждая новая строка должна иметь данный класс -->
+                    <div class="calendar--item calendar--last">
+                        <div class="calendar--item__wrapper">
+                            <span>
+                                <img class="calendar--image" src="frontend/src/images/calendar_start.png" alt="">
+                            </span>
+                            <span>Гостей</span>
+                        </div>
+                        <span>2 гостя</span>
+                    </div>
+                    <div class="calendar--item calendar--last">
+                        <div class="calendar--item__wrapper">
+                            <span>
+                                <img class="calendar--image" src="frontend/src/images/calendar_start.png" alt="">
+                            </span>
+                            <span>Гостей</span>
+                        </div>
                         <span>2 гостя</span>
                     </div>
                 </div>
-                <button type="submit">Забронировать</button>
+                <button class="info__button" type="submit">Забронировать</button>
                 <div class="info__price">
                     <ul class="price--list">
                         <li class="price--list__item">
-                            <span>8000 Р x 2 ночи</span>
-                            <span>16000 Р</span>
+                            <span>8000&#8381 × 2 ночи</span>
+                            <span>16000&#8381</span>
                         </li>
                         <li class="price--list__item">
                             <span>Плата за уборку</span>
-                            <span>3000 Р</span>
+                            <span>3000&#8381</span>
                         </li>
                     </ul>
-                    <hr>
+                    <hr class="price--splitter">
                     <div class="price--total">
-                        <span class="total">Итого</span>
+                        <span>Итого</span>
+                        <span class="total">19000&#8381</span>
                     </div>
                 </div>
             </div>

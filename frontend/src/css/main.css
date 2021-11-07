@@ -171,15 +171,15 @@ img[alt='main_icon'] {
 }
 
 /* Блоки заголовка отеля */
+/* TODO пофиксить кнопку справа */
 .content__hotel {
     display: block;
 }
 
 .hotel__hero--header {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
-    gap: 30%;
     margin-bottom: 4%;
 }
 
@@ -189,6 +189,10 @@ img[alt='main_icon'] {
     flex-wrap: wrap;
     align-items: center;
     gap: 2%;
+}
+
+.hero--header__item:first-child {
+    width: 50%;
 }
 
 .hero--header__item > .item--title {
@@ -225,12 +229,12 @@ img[alt='main_icon'] {
     margin-right: 21px;
 }
 
-.hero--header__item > .item__button > button {
+.item__button {
     background-color: #5047D7;
     color: #fff;
     border: 0;
     border-radius: 10px;
-    padding: 16px;
+    padding: 8% 27%;
 
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -363,11 +367,11 @@ img[alt='main_icon'] {
 .hero--body__info {
     display: flex;
     flex-flow: column nowrap;
-    gap: 3.5%;
+    gap: 35px;
 
-    width: 46%;
-    max-height: 500px;
-    padding: 30px 35px;
+    width: 50%;
+    max-height: 700px;
+    padding: 50px 55px;
     border: 1.5px solid rgba(80, 71, 215, 0.2);
     box-sizing: border-box;
     box-shadow: 0 10px 20px rgba(80, 71, 215, 0.2);
@@ -393,11 +397,84 @@ img[alt='main_icon'] {
 }
 
 .info__calendar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 12%;
+    padding: 25px;
+
     background: rgba(51, 51, 51, 0.05);
     border-radius: 15px;
 }
 
-@media screen and (max-width: 600px) {
+.calendar--item {
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.calendar--item__wrapper {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.calendar--image {
+    width: 18px;
+    height: 16px;
+}
+
+.calendar--last {
+    margin-top: 10%;
+}
+
+.info__button {
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    background: #5047D7;
+    padding: 2.6% 12%;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;}
+
+.price--list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price--list__item {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(51, 51, 51, 0.5);
+    list-style-type: none;
+}
+
+.price--splitter {
+    margin: 20px 0;
+}
+
+.price--total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price--total > span {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #333;
+}
+
+@media screen and (max-width: 650px) {
     .hotel__hero--body {
         display: flex;
         flex-flow: column wrap;
