@@ -1,0 +1,7 @@
+{
+  "files": ["gulpfile.ts"],
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "target": "ES6"
+  }
+}

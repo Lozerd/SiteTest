@@ -177,7 +177,7 @@ img[alt='main_icon'] {
 }
 
 /* Блоки заголовка отеля */
-.content-hotel {
+.wrapper__hotel {
     margin: 4% 0 6% 0;
     border: 1px solid red;
     height: 90px;
@@ -268,4 +268,18 @@ img[alt='main_icon'] {
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 3px;
+}
+
+/* Изображения отеля */
+.hotel__images {
+    display: flex;
+    flex-direction: row;
+}
+
+.images__item__side {
+    /*flex-direction: column;*/
+}
+
+.images__item > img, .images__item__side > div > img{
+    width: 50%;
 }
