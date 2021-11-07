@@ -4,22 +4,12 @@
 }
 
 @font-face {
-    font-family: "Roboto-Black";
-    src: url("../fonts/Roboto-Black.ttf");
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
-    font-family: "Roboto-Thin";
-    src: url("../fonts/Roboto-Thin.ttf");
-}
-
-@font-face {
-    font-family: "Roboto-Light";
-    src: url("../fonts/Roboto-Light.ttf");
-}
-
-@font-face {
-    font-family: "OpenSans";
+    font-family: "Open Sans";
     src: url("../fonts/OpenSans-Regular.ttf");
 }
 
@@ -40,7 +30,7 @@ a {
 
 header {
     background: white;
-    max-width: 100%;
+    width: 100%;
     height: 90px;
     border-bottom: 1px solid rgba(80, 71, 215, 0.2);
     box-shadow: 0 4px 6px rgba(80, 71, 215, 0.1);
@@ -112,21 +102,21 @@ img[alt='main_icon'] {
 }
 
 .nav-login {
+
+}
+
+.nav-login {
     box-sizing: border-box;
     border: 2px solid #5047D7;
     border-radius: 10px;
     padding: 7% 40%;
-}
-
-.nav-login > button {
     background: white;
     color: #5047D7;
-    border: 0;
+    /*border: 0;*/
     font-family: Roboto-Bold, sans-serif;
     font-weight: 500;
     font-size: 16px;
 }
-
 
 /* Блоки номера отеля */
 .content {
@@ -153,7 +143,7 @@ img[alt='main_icon'] {
 
 /* Breadcrumbs */
 .content_nav__breadcrumbs {
-    width: 27%;
+    width: 40%;
 }
 
 .nav__breadcrumb_li {
@@ -172,114 +162,262 @@ img[alt='main_icon'] {
     right: 3%;
 }
 
+.nav__breadcrumb_li:last-child {
+    margin-right: 0;
+}
+
 .nav__breadcrumb_li:last-child > a {
     color: #333333B2;
 }
 
 /* Блоки заголовка отеля */
-.wrapper__hotel {
-    margin: 4% 0 6% 0;
-    border: 1px solid red;
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
+.content__hotel {
+    display: block;
 }
 
-.hotel__hero {
+.hotel__hero--header {
     display: flex;
-    max-width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30%;
+    margin-bottom: 4%;
+}
+
+.hero--header__item {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    gap: 2%;
 }
 
-.hero__title {
+.hero--header__item > .item--title {
     font-family: Ubuntu-Bold, sans-serif;
-    font-weight: 700;
+    font-style: normal;
+    font-weight: bold;
     font-size: 35px;
-    margin-right: 3%;
+    line-height: 40px;
 }
 
-.hero__rating {
+.hero--header__item > .item--rating {
     display: flex;
     flex-direction: row;
-    max-width: 36%;
+    flex-wrap: nowrap;
+    gap: 5%;
 }
 
-.hero__rate {
-    margin: 0 2%;
+.hero--header__item > .item--description {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 /* Блок Услуг отеля */
-.hotel__order {
-    display: block;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 20%;
+.no-wrap {
+    flex-wrap: nowrap;
 }
 
-.order__wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.order__favorite > img {
+.item__favorites--image {
     width: 27px;
-    height: 24px;
+    height: 25px;
+    margin-right: 21px;
 }
 
-.order__purchase {
+.hero--header__item > .item__button > button {
     background-color: #5047D7;
-    padding: 5% 18%;
-    border-radius: 10px;
-}
-
-.purchase__button {
-    background-color: #5047D7;
-    border: 0;
-    font-family: Roboto-Bold, sans-serif;
-    font-weight: 700;
-    font-size: 20px;
     color: #fff;
+    border: 0;
+    border-radius: 10px;
+    padding: 16px;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
 }
 
-.hotel__price {
-    display: block;
-    margin: 5% 0 0 50%;
-    font-family: Ubuntu-Bold, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    white-space: nowrap;
-}
+/*.hotel__order {*/
+/*    display: block;*/
+/*    flex-wrap: wrap;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-between;*/
+/*    width: 20%;*/
+/*}*/
 
-.purchase__price {
-    font-family: Ubuntu-Bold, sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    letter-spacing: 2px;
-}
+/*.order__wrapper {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*}*/
 
-.purchase__currency {
-    font-family: Ubuntu-Bold, sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 3px;
-}
+/*.order__favorite > img {*/
+/*    width: 27px;*/
+/*    height: 24px;*/
+/*}*/
 
-/* Изображения отеля */
+/*.order__purchase {*/
+/*    background-color: #5047D7;*/
+/*    padding: 5% 18%;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.purchase__button {*/
+/*    background-color: #5047D7;*/
+/*    border: 0;*/
+/*    font-family: Roboto-Bold, sans-serif;*/
+/*    font-weight: 700;*/
+/*    font-size: 20px;*/
+/*    color: #fff;*/
+/*}*/
+
+/*.hotel__price {*/
+/*    display: block;*/
+/*    margin: 5% 0 0 50%;*/
+/*    font-family: Ubuntu-Bold, sans-serif;*/
+/*    font-weight: 500;*/
+/*    font-size: 14px;*/
+/*    white-space: nowrap;*/
+/*}*/
+
+/*.purchase__price {*/
+/*    font-family: Ubuntu-Bold, sans-serif;*/
+/*    font-weight: 400;*/
+/*    font-size: 22px;*/
+/*    letter-spacing: 2px;*/
+/*}*/
+
+/*.purchase__currency {*/
+/*    font-family: Ubuntu-Bold, sans-serif;*/
+/*    font-weight: 500;*/
+/*    font-size: 18px;*/
+/*    letter-spacing: 3px;*/
+/*}*/
+
+
+/* Блок изображений отеля */
 .hotel__images {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6%;
 }
 
-.images__item__side {
-    /*flex-direction: column;*/
+.images__item > img {
+    width: 97%;
+    border-radius: 20px;
 }
 
-.images__item > img, .images__item__side > div > img{
-    width: 50%;
+.images__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside__item > img {
+    width: 100%;
+    height: 97%;
+    border-radius: 30px;
+}
+
+/* Тело отеля */
+.hotel__hero--body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+/* Описание отеля */
+.hero--body__description {
+    width: 44%;
+}
+
+.description__title {
+    display: block;
+
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.description__text {
+    display: block;
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.description__text > p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Информация о цене номера */
+.hero--body__info {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3.5%;
+
+    width: 46%;
+    max-height: 500px;
+    padding: 30px 35px;
+    border: 1.5px solid rgba(80, 71, 215, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(80, 71, 215, 0.2);
+    border-radius: 15px;
+}
+
+.info--head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: "Roboto-Regular", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.info--head__price > span {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 22px;
+}
+
+.info__calendar {
+    background: rgba(51, 51, 51, 0.05);
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .hotel__hero--body {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .hero--body__description {
+        width: 100%;
+    }
+
+    .hero--body__info {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 5% 0;
+
+        width: 100%;
+        max-height: 500px;
+        padding: 30px 35px;
+        border: 1.5px solid rgba(80, 71, 215, 0.2);
+        box-sizing: border-box;
+        box-shadow: 0 10px 20px rgba(80, 71, 215, 0.2);
+        border-radius: 15px;
+    }
 }
