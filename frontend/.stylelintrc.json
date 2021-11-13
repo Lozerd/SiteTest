@@ -9,7 +9,8 @@
     "string-quotes": "double",
     "selector-list-comma-newline-after": "always-multi-line",
     "comment-empty-line-before": null,
-    "color-hex-case": null
+    "color-hex-case": null,
+    "no-descending-specificity": null
   },
   "overrides": [
     {

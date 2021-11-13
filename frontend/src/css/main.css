@@ -391,13 +391,24 @@ img[alt="main_icon"] {
   margin-bottom: 20px;
 }
 
+.hero--body--wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  width: 40%;
+  min-height: 500px;
+  margin-bottom: 22px;
+}
+
 /* Информация о цене номера */
 .hero--body__info {
   display: flex;
   flex-flow: column nowrap;
   gap: 35px;
-  width: 50%;
-  max-height: 700px;
+  width: 100%;
+  min-height: inherit;
   padding: 50px 55px;
   border: 1.5px solid rgba(80, 71, 215, 0.2);
   box-sizing: border-box;
@@ -498,7 +509,25 @@ img[alt="main_icon"] {
   color: #333;
 }
 
-@media screen and (max-width: 650px) {
+.hero--body__support {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero--body__support--title {
+  color: rgba(51, 51, 51, 0.5);
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 1100px) {
   .hotel__hero--body {
     display: flex;
     flex-flow: column wrap;
@@ -508,12 +537,22 @@ img[alt="main_icon"] {
     width: 100%;
   }
 
+  .hero--body--wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 500px;
+    width: 100%;
+    gap: 35px;
+    margin-bottom: 22px;
+  }
+
   .hero--body__info {
     display: flex;
     flex-flow: column nowrap;
-    margin: 5% 0;
     width: 100%;
-    max-height: 500px;
+    max-height: 600px;
     padding: 30px 35px;
     border: 1.5px solid rgba(80, 71, 215, 0.2);
     box-sizing: border-box;
@@ -531,6 +570,7 @@ img[alt="main_icon"] {
 }
 
 .advantages--title {
+  display: flex;
   font-family: Ubuntu-Medium, sans-serif;
   font-size: 30px;
   font-style: normal;
@@ -838,7 +878,161 @@ img[alt="main_icon"] {
   text-align: left;
 }
 
+/* Подвал */
 footer {
+  color: #FFF;
   background: #333;
-  padding: 6% 16.5%;
+  padding: 6% 12.5%;
+}
+
+.footer__info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 6%;
+}
+
+.footer__nav--block {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  width: 40%;
+}
+
+.footer--title {
+  font-family: Ubuntu-Medium, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+/* Навигационная панель подвала */
+.footer__nav--list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.footer__nav--item {
+  text-align: left;
+  list-style-type: none;
+}
+
+.footer__nav--item > a {
+  color: #fff;
+}
+
+.footer__nav--item::before {
+  content: url("../svg/footer_li_marker.svg");
+  position: relative;
+  right: 10px;
+}
+
+.footer__block {
+  display: flex;
+  flex-flow: column wrap;
+  width: 645px;
+  gap: 20%;
+}
+
+.footer__block--subscribe {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.subscribe__form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.subscribe__form--input {
+  outline: none;
+  border: 0;
+  width: 65%;
+  height: 50px;
+  background: #FFF;
+  border-radius: 10px;
+  padding: 0 1.4%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.subscribe__form--button {
+  height: 50px;
+  border: 0;
+  padding: 0 5%;
+  color: #fff;
+  background: #5047D7;
+  border-radius: 10px;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.footer__block--icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.icons--social_media {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.social_media--media {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.icons--main_icon {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.main_icon--title {
+  font-family: Ubuntu-Medium, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+  text-align: left;
 }
