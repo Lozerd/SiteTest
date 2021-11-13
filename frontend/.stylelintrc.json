@@ -1,7 +1,6 @@
 {
   "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-html"
+    "stylelint-config-standard"
   ],
   "rules": {
     "selector-class-pattern": ".[a-z]+([_]+[a-z]+([_]+[a-z]+)?)?",
@@ -15,11 +14,14 @@
   "overrides": [
     {
       "files": [
+        "../*.html",
         "*.html",
-        "**/*.html",
-        "../*.html"
+        "**/*.html"
       ],
       "customSyntax": "postcss-html"
     }
+  ],
+  "ignoreFiles": [
+    "../*.html"
   ]
 }

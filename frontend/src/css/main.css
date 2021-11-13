@@ -13,6 +13,11 @@
   src: url("../fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+
 /* Общее удаление стилей */
 * {
   padding: 0;
@@ -583,6 +588,7 @@ img[alt="main_icon"] {
   background: #fff;
   border-radius: 30px;
   width: 20%;
+  min-width: 200px;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
@@ -642,6 +648,8 @@ img[alt="main_icon"] {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 12%;
 }
 
 .other_hotels--title {
@@ -656,4 +664,181 @@ img[alt="main_icon"] {
 
 .other_hotels--wrapper {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.other_hotels__item {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 30%;
+  min-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 50px 50px rgba(184, 184, 184, 0.25);
+}
+
+.other_hotels__item--image {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.other_hotels__item--favorite {
+  position: relative;
+  left: 90%;
+  bottom: 85%;
+}
+
+.other_hotels__item--wrapper, .other_hotels__item--info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  padding: 0 5% 4%;
+}
+
+.other_hotels__item--header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3%;
+}
+
+.other_hotels__item--title {
+  font-family: Ubuntu-Medium, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.other_hotels__item--rating {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2%;
+}
+
+.other_hotels__item--description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.other_hotels__item--info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.other_hotels__item--price {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.other_hotels__item--button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: left;
+  background: 0;
+  color: rgba(51, 51, 51, 0.5);
+  border: 0;
+}
+
+/* Блок интересное для вас */
+.interesting_fu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.interesting_fu__title {
+  font-family: Ubuntu-Medium, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.interesting_fu__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.interesting_fu__item {
+  position: relative;
+  width: 30%;
+  min-width: 300px;
+  background: linear-gradient(0deg, rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3)), #333;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.interesting_fu__item--image {
+  display: block;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.interesting_fu__item--title {
+  position: absolute;
+  bottom: 20px;
+  padding: 0 3%;
+  font-family: Ubuntu-Medium, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  backdrop-filter: blur(2px);
+  color: rgb(255, 255, 255);
+  background: rgba(51, 51, 51, 0.5);
+}
+
+.interesting_fu__more {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 135px;
+  justify-content: space-between;
+}
+
+.interesting_fu__more--title {
+  white-space: nowrap;
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+footer {
+  background: #333;
+  padding: 6% 16.5%;
 }
